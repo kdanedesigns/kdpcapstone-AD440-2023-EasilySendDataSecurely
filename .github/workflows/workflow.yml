@@ -1,0 +1,27 @@
+name: React CI
+
+on: 
+  push:
+    branches:
+      -"master"
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x] 
+
+    steps:   
+      - uses: actions/checkout@v3  
+      - run: npm install
+      - run: npm run build
+      - run: npm test
+        with: --acl public-read --follow-symlinks --delete
+          args:
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRECT_ACCESS_KEY: ${{ secrets.AWS_SECRECT_ACCESS_KEY }}
+          AWS_REGION: 'us-west-2' # optional: defaults to 'us-east-1'
+          SOURCE_DIR: 'public'    # optional: defaults to entire repository
