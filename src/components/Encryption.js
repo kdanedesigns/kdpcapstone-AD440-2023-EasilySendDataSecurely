@@ -9,7 +9,7 @@ function EncryptionExample() {
     const handleEncryption = async () => {
         const ciphertext = CryptoJS.AES.encrypt(text, password);
         setEncryptedText(ciphertext.toString());
-        await navigator.clipboard.writeText(`Text: ${text}\nPassword: ${password}\nEncrypted Text: ${encryptedText}`);
+        await navigator.clipboard.writeText(`Password: ${password}\nEncrypted Text: ${encryptedText}`);
 
     };
 
