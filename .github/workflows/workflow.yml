@@ -1,3 +1,4 @@
+---
 name: React CI
 
 on: 
@@ -15,7 +16,6 @@ jobs:
         node-version: [10.x, 12.x, 14.x, 15.x, 16.x, 17.x, 18.x, 19.x] 
 
     steps:   
-<<<<<<< HEAD
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -38,10 +38,8 @@ jobs:
       #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       #     AWS_REGION: 'us-west-2'  # optional: defaults to us-east-1
       #     SOURCE_DIR: 'public'     # optional: defaults to entire repository
-=======
-      - uses: actions/checkout@v3  
-      - run: npm install
-      - run: npm run build
+      # - uses: actions/checkout@v3  
+      # - run: npm install
+      # - run: npm run build
       
 
->>>>>>> 92d8c62d5d9848b3148ac07a0f7a7f867b86c33e
