@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.4.2] 
+        node-version: '>=16.4.2' 
 
     steps:   
       - uses: actions/checkout@v3
@@ -21,6 +21,15 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm test
+
+lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+          
+
       # CD section
       # - uses: aws-actions/configure-aws-credentials # TODO: needs @v, (version number)
       #   with:
