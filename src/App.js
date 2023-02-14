@@ -2,6 +2,7 @@
 import './App.css';
 import Decryption from './components/Decryption';
 import Encryption from './components/Encryption';
+import Header from './components/Header';
 
 
 // TODO: Split the components into seperate routes and use react - router - dom to navigate between them(https://reactrouter.com/web/guides/quick-start)
@@ -11,9 +12,12 @@ import Encryption from './components/Encryption';
 
 function App() {
     return (
-        <div className="App">
-            <Encryption />
-            <Decryption />
+        <div className="App">   
+            <Header/>
+            <div className="encryptDecryptContainer1">   
+                <Encryption />
+                <Decryption />
+            </div>
         </div>
     );
 }
