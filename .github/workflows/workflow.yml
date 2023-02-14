@@ -3,24 +3,29 @@ name: Node.js CI
 
 on: 
   push:
-    branches:
-      - "main"
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - "main"
+    branches: [ "main" ]
 jobs:
   build: 
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        node-version: [16.4.2] 
+        matrix:  
+           node-verison: [ 16.x ]
 
     steps:   
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm install
-      - run: npm run build
+      - name: Use Node.js ${{ node-version }}
+        uses: actions/setup-node@v3
+        with: 
+          node-version: '>=16.4.'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build --if-present
       - run: npm test
+      - run: npm run lint
+
+      # name: Deploy to S3
       # CD section
       # - uses: aws-actions/configure-aws-credentials # TODO: needs @v, (version number)
       #   with:
@@ -38,5 +43,6 @@ jobs:
       # - run: npm install
       # - run: npm run build
 
+      
       
 
