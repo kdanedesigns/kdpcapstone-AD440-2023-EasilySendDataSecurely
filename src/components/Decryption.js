@@ -15,23 +15,22 @@ function DecryptionExample() {
     return (
         <>
             <div className="encryptDecryptContainer2">
+
                 <div className="encryptDecryptContainer3">
                     <p>key</p>
-                    <div className="encryptDecryptContainer3a">
-                        <input type="password" onChange={e => setPassword(e.target.value)} />
-                    </div>
+                    <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
                 </div>
-                <div className="encryptDecryptContainer3">
-                    <p>text</p>
-                    <div className="encryptDecryptContainer3a">
-                        <textarea onChange={e => setEncryptedText(e.target.value)}></textarea>
-                    </div>
-                </div>
-                <div className="encryptDecryptContainer4">
-                    <button onClick={handleDecryption}>Decrypt</button>
+                                    
+                <div className="encryptDecryptContainer3b">
+                <p>text</p> 
+                <textarea className="encryptDecryptContainer3a" onChange={e => setEncryptedText(e.target.value)}></textarea>
                 </div>
 
-                <div className='output'>
+                <div className="encryptDecryptContainer4">
+                    <button className="encryptDecryptContainer4" onClick={handleDecryption}>Decrypt</button>
+                </div>
+
+                <div className='encryptDecryptContainer3c'>
                     <p>Decrypted Text: {decryptedText}</p>
                 </div>
             </div>
