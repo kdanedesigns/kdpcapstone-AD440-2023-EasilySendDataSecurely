@@ -29,7 +29,7 @@ function EncryptionExample() {
                 </div>
 
                 <div className="encryptDecryptContainer4">
-                    <button className="encryptDecryptContainer4" onClick={handleEncryption}>Encrypt</button>
+                    <button className="encryptDecryptContainer4a" onClick={handleEncryption}>Encrypt</button>
                 </div>
 
                 <div className='encryptDecryptContainer3c'>

@@ -27,7 +27,7 @@ function DecryptionExample() {
                 </div>
 
                 <div className="encryptDecryptContainer4">
-                    <button className="encryptDecryptContainer4" onClick={handleDecryption}>Decrypt</button>
+                    <button className="encryptDecryptContainer4b" onClick={handleDecryption}>Decrypt</button>
                 </div>
 
                 <div className='encryptDecryptContainer3c'>
