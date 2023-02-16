@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import Encryption from './Encryption';
+import Encryption from '../components/Encryption';
 
 describe('Encryption', () => {
   it('should render successfully', () => {

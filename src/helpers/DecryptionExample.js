@@ -1,7 +1,3 @@
-kdpcapstone - AD440 - 2023 - EasilySendDataSecurely;
-import React, { useState } from "react";
-import CryptoJS from "crypto-js";
-
 function DecryptionExample() {
   const [encryptedText, setEncryptedText] = useState("");
   const [password, setPassword] = useState("");
