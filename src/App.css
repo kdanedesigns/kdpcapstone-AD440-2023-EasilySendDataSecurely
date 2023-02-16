@@ -23,6 +23,8 @@
 div.decryptInputs,
 div.encryptInputs {
   margin-top: 50px;
+  display:flex;                       /*added code from lines 26 & 27 to for flex code 1jc*/
+  flex-direction: column;
 }
 
 button {
@@ -46,4 +48,63 @@ p {
 encryptedText {
   border: 1px solid black;
   background-color: aqua;
+}
+
+.headerContainer {                       /*added code from line 53 to end for flex code 1jc*/
+  display:flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.encryptDecryptContainer1 {
+  display:flex;
+  flex-direction: row;
+  border: 1px solid black;
+  background-color: aqua;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.encryptDecryptContainer2 {
+  display:flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: aqua;
+  align-items: strech;
+  justify-content: center;
+}
+
+.encryptDecryptContainer3 {
+  display:flex;
+  flex-direction: row;
+  flex-grow: 1;
+  border: 1px solid black;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.encryptDecryptContainer3a {
+  display:flex;
+  flex-direction: row;
+  flex-grow: 1;
+  border: 1px solid black;
+  background-color: rgb(227, 231, 231);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.encryptDecryptContainer4 {
+  display:flex;
+  flex-direction: row;
+  flex-grow: 6;
+  border: 1px solid black;
+  background-color: aqua;
+  align-items: center;
+  justify-content: center;
 }
