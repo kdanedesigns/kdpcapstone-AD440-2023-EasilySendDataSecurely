@@ -14,15 +14,25 @@ function DecryptionExample() {
 
     return (
         <>
-            <div className="decryptInputs">
-                <textarea onChange={e => setEncryptedText(e.target.value)}></textarea>
-                <input type="password" onChange={e => setPassword(e.target.value)} />
-                <button onClick={handleDecryption}>Decrypt</button>
-
-
+            <div className="encryptDecryptContainer2">                /*added lines 17 to 31 for flex 1jc*/
+                <div className="encryptDecryptContainer3">
+                    <p>key</p>
+                    <div className="encryptDecryptContainer3a">
+                        <input type="password" onChange={e => setPassword(e.target.value)} />
+                    </div>
+                </div>
+                <div className="encryptDecryptContainer3">
+                    <p>text</p>
+                    <div className="encryptDecryptContainer3a">
+                        <textarea onChange={e => setEncryptedText(e.target.value)}></textarea>
+                    </div>
+                </div>
+                <div className="encryptDecryptContainer4">
+                    <button onClick={handleDecryption}>Decrypt</button>      
             </div>
             <div className='output'>
                 <p>Decrypted Text: {decryptedText}</p>
+                </div>
             </div>
         </>
     );
