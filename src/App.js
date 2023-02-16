@@ -12,9 +12,12 @@ import Encryption from './components/Encryption';
 function App() {
     return (
         <div className="App">
+            <Header/>                                /*1jc added lines 15 & 16 for flex*/
+            <div className="encryptDecryptContainer1">   
             <Encryption />
             <Decryption />
         </div>
+      </div>
     );
 }
 
