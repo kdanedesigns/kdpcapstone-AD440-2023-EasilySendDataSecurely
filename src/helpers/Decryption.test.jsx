@@ -1,4 +1,3 @@
-kdpcapstone - AD440 - 2023 - EasilySendDataSecurely;
 import React, { useState } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
