@@ -14,14 +14,14 @@ describe('Decryption', () => {
     render(<Decryption />);
     // find the pages components
     const textarea = screen.getByLabelText('text');
-      const passwordInput = screen.getByLabelText( 'password' );
-      const decryptButton = screen.getByText( 'Decrypt' );
+    const passwordInput = screen.getByLabelText( 'password' );
+    const decryptButton = screen.getByText( 'Decrypt' );
     // Type in the textarea and password
-      userEvent.type( textarea, 'text' );
-      userEvent.type( passwordInput, 'password' );
+    userEvent.type( textarea, 'text' );
+    userEvent.type( passwordInput, 'password' );
     // Click the encrypt button
-      decryptButton.click();
+    decryptButton.click();
     // Check that the encrypted text is displayed
-      expect( screen.getByText( 'Decrypted Text: ' ) ).toBeTruthy();
+    expect( screen.getByText( 'Decrypted Text: ' ) ).toBeTruthy();
   } );
 } );
