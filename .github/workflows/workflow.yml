@@ -25,6 +25,7 @@ jobs:
       - run: npm test
       - run: npm run lint
 
+      # stretch goal:
       # name: Deploy to S3
       # CD section
       # - uses: aws-actions/configure-aws-credentials # TODO: needs @v, (version number)
