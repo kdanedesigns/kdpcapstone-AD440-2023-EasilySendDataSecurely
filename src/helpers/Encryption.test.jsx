@@ -14,7 +14,7 @@ describe('Encryption', () => {
     render(<Encryption />);
     // find the pages components
     const textarea = screen.getByLabelText('text');
-      const passwordInput =
+    const passwordInput = screen.getByLabelText('password');
 screen.getByLabelText('password');
     const encryptButton = screen.getByText('Encrypt');
     // Type in the textarea and password
