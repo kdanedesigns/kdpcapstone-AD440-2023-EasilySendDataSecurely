@@ -2,9 +2,11 @@
 
 Winter 2023 AD440 Cloud Practicum Team Project
 
-## Available Scripts
+In the project directory, run:
 
-In the project directory, you can run:
+### `npm install` or `npm i` to install dependencies
+
+To start the app, run:
 
 ### `npm start`
 
