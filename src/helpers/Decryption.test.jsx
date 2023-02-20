@@ -13,15 +13,15 @@ describe('Decryption', () => {
   it('should be able to decrypt text', () => {
     render(<Decryption />);
     // find the pages components
-    const textarea = screen.getByLabelText('Message');
-    const passwordInput = screen.getByLabelText( 'Password' );
-    const decryptButton = screen.getByText( 'Decrypt' );
+    const textarea = screen.getByLabelText('text');
+    const passwordInput = screen.getByLabelText('password');
+    const decryptButton = screen.getByText('Decrypt');
     // Type in the textarea and password
-    userEvent.type( textarea, 'Hello Decypted' );
-    userEvent.type( passwordInput, 'Password' );
+    userEvent.type( textarea, 'Hello Decypted');
+    userEvent.type( passwordInput, 'Password');
     // Click the encrypt button
     decryptButton.click();
     // Check that the encrypted text is displayed
-    expect( screen.getByText( 'Decrypted Text: ' ) ).toBeTruthy();
+    expect( screen.getByText( 'Decrypted Text: ')).toBeTruthy();
   } );
 });
