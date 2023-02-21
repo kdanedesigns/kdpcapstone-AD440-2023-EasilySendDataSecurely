@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-
 import userEvent from '@testing-library/user-event';
 
 import Decryption from '../components/Decryption';
@@ -20,7 +19,7 @@ describe('Decryption', () => {
     const textarea = screen.getByLabelText('text');
     const passwordInput = screen.getByLabelText( 'password' );
 screen.getByLabelText('password');
-    const decryptButton = screen.getByText("Decrypt");
+    const decryptButton = screen.getByText('Decrypt');
     // Type in the textarea and password
     userEvent.type(textarea, 'text');
     userEvent.type(passwordInput, 'password');
