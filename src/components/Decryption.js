@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import CryptoJS from 'crypto-js';
 
 function DecryptionExample() {
     const [encryptedText, setEncryptedText] = useState('');
@@ -7,15 +6,15 @@ function DecryptionExample() {
     const [decryptedText, setDecryptedText] = useState('');
 
     const handleDecryption = () => {
-        const bytes = CryptoJS.AES.decrypt(encryptedText, password);
-        const originalText = bytes.toString(CryptoJS.enc.Utf8);
-        setDecryptedText(originalText);
+        //INSERT AXIOS POST CODE HERE
     };
 
     return (
         <>
             <div className="decryptInputs">
+
                 <textarea aria-label='text' onChange={e => setEncryptedText(e.target.value)}></textarea>
+
                 <input type="password" onChange={e => setPassword(e.target.value)} />
                 <button onClick={handleDecryption}>Decrypt</button>
 
