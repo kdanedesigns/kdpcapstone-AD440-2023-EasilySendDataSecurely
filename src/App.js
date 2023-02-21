@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 import React from 'react';
 import './App.css';
 import Decryption from './components/Decryption';
