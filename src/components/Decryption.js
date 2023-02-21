@@ -15,7 +15,7 @@ function DecryptionExample() {
 
                 <textarea aria-label='Message' onChange={e => setEncryptedText(e.target.value)}></textarea>
 
-                <input type="password" onChange={e => setPassword(e.target.value)} />
+                <input aria-label='password' type="password" onChange={e => setPassword(e.target.value)} />
                 <button onClick={handleDecryption}>Decrypt</button>
 
 
