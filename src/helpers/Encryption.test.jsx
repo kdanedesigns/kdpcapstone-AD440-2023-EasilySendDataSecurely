@@ -13,13 +13,13 @@ describe('Encryption', () => {
     } );
   } );
   
-
   it('should be able to encrypt text', () => {
     render(<Encryption />);
     // find the pages components
     const textarea = screen.getByLabelText('text');
     const passwordInput = screen.getByLabelText('password');
 screen.getByLabelText('password');
+
     const encryptButton = screen.getByText('Encrypt');
     // Type in the textarea and password
     userEvent.type(textarea, 'text');
@@ -27,6 +27,6 @@ screen.getByLabelText('password');
     // Click the encrypt button
     encryptButton.click();
     // Check that the encrypted text is displayed
-      expect(screen.getByText('Encrypted Text: ')).toBeTruthy();
+    expect(screen.getByText('Encrypted Text: ')).toBeTruthy();
   });
 });
