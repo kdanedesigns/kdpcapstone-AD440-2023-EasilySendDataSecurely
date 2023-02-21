@@ -40,7 +40,7 @@ function EncryptionExample() {
     return (
         <>
             <div className='encryptInputs'>
-                <textarea aria-label='text' type="text" onChange={e => setText(e.target.value)} />
+                <textarea aria-label='Message' type="text" onChange={e => setText(e.target.value)} />
                 <input type="password" onChange={e => setPassword(e.target.value)} />
                 <button onClick={handleEncryption}>{encrypted ? "Encrypted!" : "Click to Encrypt"}</button>
             </div>
