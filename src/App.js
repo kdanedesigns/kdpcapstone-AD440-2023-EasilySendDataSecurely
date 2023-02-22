@@ -8,11 +8,11 @@ function App() {
     return (
         <div className="App">
         <Header/>                                       //1jc added for changes to UI
-        <div className="encryptDecryptContainer1">      //1jc added for changes to UI
+                                                        //1jc took out line 11 per review of reviewer
             <Encryption />
             <Decryption />
         </div>
-       </div>
+                                                        //1jc took out line 15 per review of reviewer
     );
 }
 
