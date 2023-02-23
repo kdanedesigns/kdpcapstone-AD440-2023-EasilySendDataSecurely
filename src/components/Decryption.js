@@ -11,7 +11,7 @@ function DecryptionExample() {
 
     return (
         <>
-//add css lines 1jc
+
         
            
  <div className="encryptDecryptContainer2">
@@ -34,7 +34,7 @@ function DecryptionExample() {
                     <p>Decrypted Text: {decryptedText}</p>
                 </div>
  
-//add css lines 1jc
+
             </div>
         </>
     );
