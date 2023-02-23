@@ -9,7 +9,7 @@ function EncryptionExample() {
     const [encrypted, setEncrypted] = useState(false);
 
     const handleEncryption = async () => {
-
+//axios lines 12-36
         try {
             axios
                 .post("https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Encrypt-AD440Winter2023-V3", { message: text, key: password })
@@ -34,20 +34,36 @@ function EncryptionExample() {
         } catch (error) {
             console.error(error);
         }
-
+//axios lines 12-36
     };
 
     return (
         <>
-            <div className='encryptInputs'>
+//new css lines added by 1jc
+             
 
-                <textarea aria-label='text' type="text" onChange={e => setText(e.target.value)} />
-                <input aria-label='password' type="password" onChange={e => setPassword(e.target.value)} />
+  <div className='encryptDecryptContainer2'>
 
-                <button onClick={handleEncryption}>{encrypted ? "Encrypted!" : "Click to Encrypt"}</button>
-            </div>
-            <div className='output'>
-                <p>Encrypted Text: {encryptedText}</p>
+                <div className="encryptDecryptContainer3">
+                    <p>key</p>
+                    <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
+                </div>              
+
+
+                <div className="encryptDecryptContainer3b">
+                    <p>text</p>                    
+                    <textarea className="encryptDecryptContainer3a" type="text" onChange={e => setText(e.target.value)} />
+                </div>
+
+                <div className="encryptDecryptContainer4">
+                    <button className="encryptDecryptContainer4a" onClick={handleEncryption}>Encrypt</button>
+                </div>
+
+                <div className='encryptDecryptContainer3c'>
+                    <p>Encrypted Text: {encryptedText}</p>
+                </div>
+
+//new css lines added by 1jc
             </div>
         </>
     );
