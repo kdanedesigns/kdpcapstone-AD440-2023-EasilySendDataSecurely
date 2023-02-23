@@ -9,7 +9,7 @@ function EncryptionExample() {
     const [encrypted, setEncrypted] = useState(false);
 
     const handleEncryption = async () => {
-//axios lines 12-36
+
         try {
             axios
                 .post("https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Encrypt-AD440Winter2023-V3", { message: text, key: password })
@@ -34,12 +34,12 @@ function EncryptionExample() {
         } catch (error) {
             console.error(error);
         }
-//axios lines 12-36
+
     };
 
     return (
         <>
-//new css lines added by 1jc
+
              
 
   <div className='encryptDecryptContainer2'>
