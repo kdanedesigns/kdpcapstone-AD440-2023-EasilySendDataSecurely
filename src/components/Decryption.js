@@ -11,17 +11,30 @@ function DecryptionExample() {
 
     return (
         <>
-            <div className="decryptInputs">
+//add css lines 1jc
+        
+           
+ <div className="encryptDecryptContainer2">
 
-                <textarea aria-label='text' onChange={e => setEncryptedText(e.target.value)}></textarea>
+                <div className="encryptDecryptContainer3">
+                    <p>key</p>
+                    <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
+                </div>
+                                    
+                <div className="encryptDecryptContainer3b">
+                <p>text</p> 
+                <textarea className="encryptDecryptContainer3a" onChange={e => setEncryptedText(e.target.value)}></textarea>
+                </div>
 
-                <input aria-label='password' type="password" onChange={e => setPassword(e.target.value)} />
-                <button onClick={handleDecryption}>Decrypt</button>
+                <div className="encryptDecryptContainer4">
+                    <button className="encryptDecryptContainer4b" onClick={handleDecryption}>Decrypt</button>
+                </div>
 
-
-            </div>
-            <div className='output'>
-                <p>Decrypted Text: {decryptedText}</p>
+                <div className='encryptDecryptContainer3c'>
+                    <p>Decrypted Text: {decryptedText}</p>
+                </div>
+ 
+//add css lines 1jc
             </div>
         </>
     );
