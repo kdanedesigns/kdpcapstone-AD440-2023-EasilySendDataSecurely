@@ -42,6 +42,7 @@ const DecryptionComponent = () => {
         }
     };
     return (
+        <>
         <div>
             <div className="decryptInputs">
                 <textarea
@@ -69,6 +70,7 @@ const DecryptionComponent = () => {
                 <p className="eout">Decrypted Result: {decryptedText}</p>
             </div>
         </div>
+        </>
     );
 };
 
