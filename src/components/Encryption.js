@@ -39,15 +39,39 @@ function EncryptionExample() {
 
     return (
         <>
-            <div className='encryptInputs'>
 
-                <textarea aria-label='text' type="text" onChange={e => setText(e.target.value)} />
-                <input aria-label='password' type="password" onChange={e => setPassword(e.target.value)} />
 
-                <button onClick={handleEncryption}>{encrypted ? "Encrypted!" : "Click to Encrypt"}</button>
-            </div>
-            <div className='output'>
-                <p>Encrypted Text: {encryptedText}</p>
+             
+
+  <div className='encryptDecryptContainer2'>
+
+
+            <div className='encryptDecryptContainer2'>
+
+
+                <div className="encryptDecryptContainer3">
+                    <p>key</p>
+                    <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
+                </div>              
+
+
+                <div className="encryptDecryptContainer3b">
+                    <p>text</p>                    
+                    <textarea className="encryptDecryptContainer3a" type="text" onChange={e => setText(e.target.value)} />
+                </div>
+
+                <div className="encryptDecryptContainer4">
+                    <button className="encryptDecryptContainer4a" onClick={handleEncryption}>Encrypt</button>
+                </div>
+
+                <div className='encryptDecryptContainer3c'>
+                    <p>Encrypted Text: {encryptedText}</p>
+                </div>
+
+
+//new css lines added by 1jc
+
+
             </div>
         </>
     );
