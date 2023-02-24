@@ -40,7 +40,14 @@ function EncryptionExample() {
     return (
         <>
 
+
+             
+
+  <div className='encryptDecryptContainer2'>
+
+
             <div className='encryptDecryptContainer2'>
+
 
                 <div className="encryptDecryptContainer3">
                     <p>key</p>
@@ -60,6 +67,11 @@ function EncryptionExample() {
                 <div className='encryptDecryptContainer3c'>
                     <p>Encrypted Text: {encryptedText}</p>
                 </div>
+
+
+//new css lines added by 1jc
+
+
             </div>
         </>
     );
