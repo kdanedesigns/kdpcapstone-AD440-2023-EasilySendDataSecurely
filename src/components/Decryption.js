@@ -1,7 +1,5 @@
-
 import React, { useState } from "react";
 import axios from "axios"; 
-
 
 const DecryptionComponent = () => {
     const [text, setText] = useState("");
@@ -10,13 +8,16 @@ const DecryptionComponent = () => {
     const [decryptedText, setDecryptedText] = useState("");
     const [decrypted, setDecrypted] = useState(false);
 
-
+    //TODO: remove hard coded JSON object from URL and replace with user inputs
+    // https://av3bdzsgm9.execute-api.us-west-2.amazonaws.com/Decrypt-AD440Winter2023-V2
+    // https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Decrypt-AD440Winter2023-V3
     const handleDecryption = async () => {
         try {
             axios
                 .post("https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Decrypt-AD440Winter2023-V3", { encryptedMessage: text, key: password })
 
                 .then(function (response) {
+
                     console.log(response.data);
                     // console.log(response.data.key);
                     // original code setEncryptedText(response.data);
@@ -43,12 +44,14 @@ const DecryptionComponent = () => {
     return (
         <div>
             <div className="decryptInputs">
-
-
-                <textarea aria-label='text' onChange={e => setEncryptedText(e.target.value)}></textarea>
-
-                <input aria-label='password' type="password" onChange={e => setPassword(e.target.value)} />
-                <button onClick={handleDecryption}>Decrypt</button>
+                <textarea
+                    className="etext"
+                    type="text"
+                    placeholder="Enter Your Message To Be Decrypted: "
+                    // onChange={e => setText(e.target.value)}
+                    onChange={e => setText(e.target.value)}
+                />
+            </div>
 
             <div className="decryptKeyInputs">
                 <input
