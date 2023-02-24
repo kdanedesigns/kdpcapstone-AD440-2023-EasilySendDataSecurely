@@ -1,20 +1,18 @@
-
+import React from 'react';
 import './App.css';
 import Decryption from './components/Decryption';
 import Encryption from './components/Encryption';
-
-
-// TODO: Split the components into seperate routes and use react - router - dom to navigate between them(https://reactrouter.com/web/guides/quick-start)
-// TODO: Upload the backend code to AWS Lambda and connect the frontend to it
-// TODO: Connect the components to AWS Lambda functions to encrypt and decrypt data
-
+import Header from './components/Header';    //1jc added for changes to UI
 
 function App() {
     return (
         <div className="App">
+        <Header/>                                       //1jc added for changes to UI
+                                                        //1jc took out line 11 per review of reviewer
             <Encryption />
             <Decryption />
         </div>
+                                                        //1jc took out line 15 per review of reviewer
     );
 }
 
