@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; 
+import axios from "axios";
 
 const DecryptionComponent = () => {
     const [text, setText] = useState("");
@@ -46,10 +46,10 @@ const DecryptionComponent = () => {
                     <p>key</p>
                     <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
                 </div>
-                                    
+
                 <div className="encryptDecryptContainer3b">
-                <p>text</p> 
-                <textarea className="encryptDecryptContainer3a" onChange={e => setEncryptedText(e.target.value)}></textarea>
+                    <p>text</p>
+                    <textarea className="encryptDecryptContainer3a" type="text" onChange={e => setText(e.target.value)}></textarea>
                 </div>
 
                 <div className="encryptDecryptContainer4">
@@ -61,7 +61,6 @@ const DecryptionComponent = () => {
                 </div>
 
             </div>
-        </div>
         </>
 
     );
