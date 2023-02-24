@@ -11,7 +11,7 @@ describe('Decryption', () => {
     await waitFor(() => {
       expect(screen.getByText('Decrypted Text:')).toBeTruthy();
     });
-  } );
+  });
   
   it('should be able to decrypt text', () => {
     render(<Decryption />);
