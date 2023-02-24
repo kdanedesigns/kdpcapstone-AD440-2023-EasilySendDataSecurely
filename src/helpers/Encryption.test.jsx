@@ -8,7 +8,7 @@ describe('Encryption', () => {
   it('should render successfully', async () => {
     render(<Encryption />);
     expect( screen.getByText('Encrypted Text:')).toBeTruthy();
-    await waitFor( () => { 
+    await waitFor(() => { 
       expect( screen.getByText('Encrypted Text:')).toBeTruthy();
     });
   });
