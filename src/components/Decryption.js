@@ -40,12 +40,37 @@ const DecryptionComponent = () => {
     };
     return (
         <>
+
+
+        
+           
+ <div className="encryptDecryptContainer2">
+
+
             <div className="encryptDecryptContainer2">
+
 
                 <div className="encryptDecryptContainer3">
                     <p>key</p>
                     <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
                 </div>
+
+                                    
+                <div className="encryptDecryptContainer3b">
+                <p>text</p> 
+                <textarea className="encryptDecryptContainer3a" onChange={e => setEncryptedText(e.target.value)}></textarea>
+                </div>
+
+                <div className="encryptDecryptContainer4">
+                    <button className="encryptDecryptContainer4b" onClick={handleDecryption}>Decrypt</button>
+                </div>
+
+                <div className='encryptDecryptContainer3c'>
+                    <p>Decrypted Text: {decryptedText}</p>
+                </div>
+ 
+
+
 
                 <div className="encryptDecryptContainer3b">
                     <p>text</p>
@@ -60,10 +85,15 @@ const DecryptionComponent = () => {
                     <p>Decrypted Text: {decryptedText}</p>
                 </div>
 
+
             </div>
         </>
 
     );
 };
 
+
+export default DecryptionExample;
+=======
 export default DecryptionComponent;
+
