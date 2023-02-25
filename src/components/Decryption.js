@@ -41,18 +41,8 @@ const DecryptionComponent = () => {
     }
   };
   return (
-    <>
-      <div className="encryptDecryptContainer2">
-        <div className="encryptDecryptContainer3">
-          <p>key</p>
-          <input
-            aria-label="password"
-            className="encryptDecryptContainer3a"
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
 
+        <div className="encryptDecryptContainer2">
         <div className="encryptDecryptContainer3b">
           <p>text</p>
           <textarea
@@ -61,6 +51,16 @@ const DecryptionComponent = () => {
             type="text"
             onChange={(e) => setText(e.target.value)}
           ></textarea>
+        </div>
+
+        <div className="encryptDecryptContainer3">
+          <p>key</p>
+          <input
+            aria-label="password"
+            className="encryptDecryptContainer3a"
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
 
         <div className="encryptDecryptContainer4">
@@ -76,7 +76,7 @@ const DecryptionComponent = () => {
           <p>Decrypted Text: {decryptedText}</p>
         </div>
       </div>
-    </>
+  
   );
 };
 
