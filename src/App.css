@@ -23,15 +23,8 @@
 div.decryptInputs,
 div.encryptInputs {
   margin-top: 50px;
-
-  
-  display:flex;
+  display: flex;
   flex-direction: column;
-  
-
-  display:flex;
-  flex-direction: column;
-
 }
 
 button {
@@ -57,11 +50,8 @@ encryptedText {
   background-color: aqua;
 }
 
-
-
-
 .headerContainer {
-  display:flex;
+  display: flex;
   flex-direction: column;
   /* border: 1px solid black; */
   background-color: aqua;
@@ -71,7 +61,7 @@ encryptedText {
 }
 
 .encryptDecryptContainer1 {
-  display:flex;
+  display: flex;
   flex-direction: row;
   /* border: 1px solid black; */
   /* background-color: aqua; */
@@ -80,7 +70,7 @@ encryptedText {
 }
 
 .encryptDecryptContainer2 {
-  display:flex;
+  display: flex;
   flex-direction: column;
   /* border: 1px solid black; */
   /* background-color: aqua; */
@@ -90,67 +80,61 @@ encryptedText {
 }
 
 .encryptDecryptContainer3 {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
   /* background-color: red; */
   align-items: center;
-  justify-content:flex-start;
-  width: 500px;  
+  justify-content: flex-start;
+  width: 500px;
 }
 
 .encryptDecryptContainer3a {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  flex-grow: 1;  
+  flex-grow: 1;
   background-color: white;
   align-items: center;
-  justify-content:flex-start;
-  width: 500px;  
+  justify-content: flex-start;
+  width: 500px;
 }
 
 .encryptDecryptContainer3b {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
   /* background-color: red; */
   align-items: top;
-  justify-content:flex-start;
-  width: 500px;  
-  height:200px
+  justify-content: flex-start;
+  width: 500px;
+  height: 200px;
 }
 
-border: 1px solid black;
-
-
 .encryptDecryptContainer4a {
-  display:flex;
+  display: flex;
   flex-direction: row;
   background-color: rgb(0, 255, 106);
   align-items: center;
   justify-content: center;
-  flex-grow: 1;  
+  flex-grow: 1;
 }
 
 .encryptDecryptContainer4b {
-  display:flex;
+  display: flex;
   flex-direction: row;
   background-color: yellow;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;  
+  flex-grow: 1;
 }
 
-
-
 .logoAndBackground {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-grow: 1;
   margin: 100px;
   /* background-color: red; */
   align-items: center;
-  justify-content:flex-center;
+  justify-content: flex-center;
   /* width: 500px;   */
 }
-
