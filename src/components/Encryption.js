@@ -63,9 +63,6 @@ function EncryptionExample() {
 
       </div>
     </>
-
-
-
   );
 }
 
