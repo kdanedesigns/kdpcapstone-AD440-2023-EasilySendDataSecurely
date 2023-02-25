@@ -23,9 +23,10 @@
 div.decryptInputs,
 div.encryptInputs {
   margin-top: 50px;
+  
   display:flex;
   flex-direction: column;
-
+  
 }
 
 button {
@@ -50,7 +51,6 @@ encryptedText {
   border: 1px solid black;
   background-color: aqua;
 }
-
 .headerContainer {
   display:flex;
   flex-direction: column;
@@ -130,15 +130,4 @@ border: 1px solid black;
   align-items: center;
   justify-content: center;
   flex-grow: 1;  
-}
-
-.logoAndBackground {
-  display:flex;
-  flex-direction: row;
-  flex-grow: 1;
-  margin: 100px;
-  /* background-color: red; */
-  align-items: center;
-  justify-content:flex-center;
-  /* width: 500px;   */
 }
