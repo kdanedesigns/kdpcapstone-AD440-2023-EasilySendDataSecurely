@@ -7,28 +7,30 @@ function EncryptionExample() {
     const [encryptedText, setEncryptedText] = useState('');
 
     const handleEncryption = async () => {
-        // const ciphertext = CryptoJS.AES.encrypt(text, password);
-        // setEncryptedText(ciphertext.toString());
-        // await navigator.clipboard.writeText(`${ciphertext.toString()}`);
+        const ciphertext = CryptoJS.AES.encrypt(text, password);
+        setEncryptedText(ciphertext.toString());
 
-        //post request to backend
+        //https://do2if6u69i.execute-api.us-west-2.amazonaws.com/default/scott_ed
+        //https://pvz6dynre2wv5don2glryirr5e0ehlnc.lambda-url.us-west-2.on.aws/
+        /* 'Access-Control-Allow-Origin': '"Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
+        'Content-Type': 'application/json' */
+
         const response = await fetch('https://do2if6u69i.execute-api.us-west-2.amazonaws.com/default/scott_ed', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'POST,OPTIONS'
+
             },
             body: JSON.stringify({
-                // encryptedText: ciphertext.toString()
-                message: text,
-                key: password
+                encryptedText: encryptedText
             })
         });
         const data = await response.json();
         console.log(data);
-
-
     };
-
     return (
         <>
             <div className='encryptInputs'>
