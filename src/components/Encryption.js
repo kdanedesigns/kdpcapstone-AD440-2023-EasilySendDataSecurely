@@ -6,6 +6,8 @@ function EncryptionExample() {
   const [password, setPassword] = useState("");
   const [encryptedText, setEncryptedText] = useState("");
 
+  ///comment
+
   const [encrypted, setEncrypted] = useState(false);
 
   const handleEncryption = async () => {
