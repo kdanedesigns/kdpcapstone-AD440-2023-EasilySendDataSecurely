@@ -43,14 +43,14 @@ function EncryptionExample() {
       <div className='encryptDecryptContainer2'>
         <div className="encryptDecryptContainer3">
           <p>key</p>
-          <input className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
+          <input aria-label="password" className="encryptDecryptContainer3a" type="password" onChange={e => setPassword(e.target.value)} />
         </div>
         <div className="encryptDecryptContainer3b">
           <p>text</p>
-          <textarea className="encryptDecryptContainer3a" type="text" onChange={e => setText(e.target.value)} />
+          <textarea aria-label="text" className="encryptDecryptContainer3a" type="text" onChange={e => setText(e.target.value)} />
         </div>
         <div className="encryptDecryptContainer4">
-          <button className="encryptDecryptContainer4a" onClick={handleEncryption}>Encrypt</button>
+          <button className="encryptDecryptContainer4a" onClick={handleEncryption}>{encrypted ? "Encrypted!" : "Click to Encrypt"}</button>
         </div>
         <div className='encryptDecryptContainer3c'>
           <p>Encrypted Text: {encryptedText}</p>
