@@ -56,8 +56,6 @@ function EncryptionExample() {
             type="password"
             placeholder="Input Encryption Key Here: "
             onChange={(e) => setPassword(e.target.value)}
-            //clear password box after encryption
-            value={encrypted ? '' : password}
           />
         </div>
         <div className="encryptDecryptContainer3b">
@@ -68,8 +66,6 @@ function EncryptionExample() {
             placeholder="Input Text to Encrypt Here: "
             type="text"
             onChange={(e) => setText(e.target.value)}
-            //clear text box after encryption
-            value={encrypted ? '' : text}
           />
         </div>
         <div className="encryptDecryptContainer4">

@@ -18,11 +18,16 @@ const DecryptionComponent = () => {
                 )
 
                 .then(function (response) {
+                    console.log(response.data.decryptedMessage);
                     if (password == "") {
-                        alert("Invalid Key or No Key Provided")
-                        // setDecryptedText("Invalid Key or No Key Provided");
+                        alert("Invalid Key or No Key Provided");
+                        setDecrypted(false);
+                    }
+                    else if (response.data.decryptedMessage == "") {
+                        setDecryptedText("Invalid Key or No Key Provided");
                     }
                     setDecryptedText(response.data.decryptedMessage);
+
                 })
                 .catch(function (error) {
                     if (error.response) {
@@ -54,8 +59,6 @@ const DecryptionComponent = () => {
                         placeholder="Input Decryption Key Here: "
                         type="password"
                         onChange={(e) => setPassword(e.target.value)}
-                        //clear password box after decryption
-                        value={decrypted ? "" : password}
                     />
                 </div>
 
@@ -67,8 +70,6 @@ const DecryptionComponent = () => {
                         placeholder="Input Encrypted Text Here: "
                         type="text"
                         onChange={(e) => setText(e.target.value)}
-                        //clear text box after decryption
-                        value={decrypted ? "" : text}
                     ></textarea>
                 </div>
 
