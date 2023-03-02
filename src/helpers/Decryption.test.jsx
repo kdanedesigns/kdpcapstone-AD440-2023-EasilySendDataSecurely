@@ -19,6 +19,7 @@ describe('Decryption', () => {
     // Type in the textarea and password
     userEvent.type(textarea, 'Hello Decypted');
     userEvent.type(passwordInput, 'Password');
+
     // Click the encrypt button
     decryptButton.click();
     // Check that the encrypted text is displayed
