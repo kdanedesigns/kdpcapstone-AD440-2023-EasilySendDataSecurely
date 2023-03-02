@@ -14,12 +14,12 @@ function HeaderExample() {
         alt="this is the group logo"
       />
       <div className="headerContainer">
-        <h1>Encryption/Decryption Website</h1>
-        <p>Key in the encryption key in the encryption field</p>
-        <p>Key in your plain text or encrypted data in the data field</p>
+        <h1><b>Encryption/Decryption Website</b></h1>
+        <h2><b>Key in the encryption key in the encryption field</b></h2>
+        <h2><b>Key in your plain text or encrypted data in the data field</b></h2>
         <p>
-          Select the encrypt key to encrypt your data or the decrypt key to
-          decrypt your data,{" "}
+          <b>Select the encrypt key to encrypt your data or the decrypt key to
+          decrypt your data,</b>alert("Need your key!")
         </p>
       </div>
       <img
