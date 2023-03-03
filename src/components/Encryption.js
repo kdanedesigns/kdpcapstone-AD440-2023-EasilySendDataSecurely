@@ -11,23 +11,16 @@ function EncryptionExample() {
   const handleEncryption = async () => {
 
     try {
-      if (password == '') {
-        setEncryptedText('Invalid Key');
+      if (password === '') {
+        setEncryptedText('Invalid Key or No key provided.');
+        encrypted = false; //prevents button change
       }
-
       axios
         .post(
           'https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Encrypt-AD440Winter2023-V3',
           { message: text, key: password }
         )
         .then(function (response) {
-          if (password == "") {
-            alert("Invalid Key or No Key Provided");
-            setEncrypted(false);
-          }
-          else if (response.data.encryptedMessage == "") {
-            setEncryptedText("Invalid Key or No Key Provided");
-          }
           setEncryptedText(response.data.encryptedMessage);
 
         })
