@@ -15,7 +15,6 @@ function EncryptionExample() {
         setEncryptedText('Invalid Key or No key provided.');
         encrypted = false; //prevents button change
       }
-
       axios
         .post(
           'https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Encrypt-AD440Winter2023-V3',
@@ -23,6 +22,7 @@ function EncryptionExample() {
         )
         .then(function (response) {
           setEncryptedText(response.data.encryptedMessage);
+
         })
         .catch(function (error) {
           if (error.response) {

@@ -14,7 +14,6 @@ const DecryptionComponent = () => {
                 setDecryptedText('Invalid Key or No key provided.');
                 decrypted = false; //prevents button change
             }
-
             axios
                 .post(
                     "https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Decrypt-AD440Winter2023-V3",
