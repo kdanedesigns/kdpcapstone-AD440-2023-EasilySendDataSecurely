@@ -21,6 +21,13 @@ function EncryptionExample() {
           { message: text, key: password }
         )
         .then(function (response) {
+          if (password == "") {
+            alert("Invalid Key or No Key Provided");
+            setEncrypted(false);
+          }
+          else if (response.data.encryptedMessage == "") {
+            setEncryptedText("Invalid Key or No Key Provided");
+          }
           setEncryptedText(response.data.encryptedMessage);
 
         })
@@ -73,7 +80,7 @@ function EncryptionExample() {
             className="encryptDecryptContainer4a"
             onClick={handleEncryption}
           >
-            {encrypted ? 'Encrypted!' : 'Click to Encrypt'}
+            {encrypted ? 'Encrypted!' : 'Encrypt'}
           </button>
         </div>
         <div className="encryptDecryptContainer3c">
