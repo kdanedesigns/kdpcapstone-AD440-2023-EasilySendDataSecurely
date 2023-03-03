@@ -13,6 +13,7 @@ function EncryptionExample() {
     try {
       if (password == '') {
         setEncryptedText('Invalid Key');
+        encrypted = false;
       }
 
       axios
@@ -21,15 +22,7 @@ function EncryptionExample() {
           { message: text, key: password }
         )
         .then(function (response) {
-          if (password == "") {
-            alert("Invalid Key or No Key Provided");
-            setEncrypted(false);
-          }
-          else if (response.data.encryptedMessage == "") {
-            setEncryptedText("Invalid Key or No Key Provided");
-          }
           setEncryptedText(response.data.encryptedMessage);
-
         })
         .catch(function (error) {
           if (error.response) {

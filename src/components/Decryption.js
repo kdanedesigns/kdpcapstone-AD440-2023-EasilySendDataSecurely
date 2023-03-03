@@ -10,6 +10,10 @@ const DecryptionComponent = () => {
     // const [errorMessage, setErrorMessage] = useState("");
     const handleDecryption = async () => {
         try {
+            if (password == '') {
+                setDecryptedText('Invalid Key');
+                decrypted = false; //prevents button change
+            }
 
             axios
                 .post(
@@ -18,14 +22,6 @@ const DecryptionComponent = () => {
                 )
 
                 .then(function (response) {
-                    console.log(response.data.decryptedMessage);
-                    if (password == "") {
-                        alert("Invalid Key or No Key Provided");
-                        setDecrypted(false);
-                    }
-                    else if (response.data.decryptedMessage == "") {
-                        setDecryptedText("Invalid Key or No Key Provided");
-                    }
                     setDecryptedText(response.data.decryptedMessage);
 
                 })
