@@ -17,8 +17,8 @@ describe("Decryption", () => {
     const passwordInput = screen.getByLabelText("password");
     const decryptButton = screen.getByText("Decrypt");
     // Type in the textarea and password
-    userEvent.type(textarea, "Hello Decypted");
-    userEvent.type(passwordInput, "Password");
+    userEvent.type(textarea, "text");
+    userEvent.type(passwordInput, "password");
     // Click the encrypt button
     decryptButton.click();
     // Check that the encrypted text is displayed

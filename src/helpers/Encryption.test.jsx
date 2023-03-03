@@ -16,6 +16,7 @@ describe('Encryption', () => {
     const textarea = screen.getByLabelText('text');
     const passwordInput = screen.getByLabelText('password');
     const encryptButton = screen.getByText('Encrypt');
+
     // Type in the textarea and password
     userEvent.type(textarea, 'text');
     userEvent.type(passwordInput, 'password');
