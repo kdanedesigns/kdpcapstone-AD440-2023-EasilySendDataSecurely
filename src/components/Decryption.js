@@ -78,7 +78,7 @@ const DecryptionComponent = () => {
                         className="encryptDecryptContainer4b"
                         onClick={handleDecryption}
                     >
-                        {decrypted ? 'Decrypted!' : 'Click to Decrypt'}
+                        {decrypted ? 'Decrypted!' : 'Decrypt'}
                     </button>
                 </div>
 
