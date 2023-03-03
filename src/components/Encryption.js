@@ -12,7 +12,7 @@ function EncryptionExample() {
 
     try {
       if (password == '') {
-        setEncryptedText('Invalid Key');
+        setEncryptedText('Invalid Key or No key provided.');
         encrypted = false; //prevents button change
       }
 
