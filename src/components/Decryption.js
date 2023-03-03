@@ -10,7 +10,7 @@ const DecryptionComponent = () => {
     // const [errorMessage, setErrorMessage] = useState("");
     const handleDecryption = async () => {
         try {
-            if (password == '') {
+            if (password === '') {
                 setDecryptedText('Invalid Key or No key provided.');
                 decrypted = false; //prevents button change
             }

@@ -11,7 +11,7 @@ function EncryptionExample() {
   const handleEncryption = async () => {
 
     try {
-      if (password == '') {
+      if (password === '') {
         setEncryptedText('Invalid Key or No key provided.');
         encrypted = false; //prevents button change
       }
