@@ -48,8 +48,6 @@ function EncryptionExample() {
     } catch (error) {
       console.error(error);
     }
-    //TODO: FIX COPY FUNCTIONALITY: CURRENTLY REQUIRES TWO CLICKS TO COPY
-    await navigator.clipboard.writeText(`${encryptedText}`);
   };
 
   return (
