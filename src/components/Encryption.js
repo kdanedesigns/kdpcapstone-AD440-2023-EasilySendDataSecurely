@@ -13,7 +13,7 @@ function EncryptionExample() {
     try {
       if (password == '') {
         setEncryptedText('Invalid Key');
-        encrypted = false;
+        encrypted = false; //prevents button change
       }
 
       axios
