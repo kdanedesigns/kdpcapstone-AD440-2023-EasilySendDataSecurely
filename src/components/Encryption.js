@@ -8,6 +8,8 @@ function EncryptionExample() {
 
   const [encrypted, setEncrypted] = useState(false);
 
+  navigator.clipboard.writeText(encryptedText);
+
   const handleEncryption = async () => {
 
     try {
