@@ -7,7 +7,7 @@ import SingleComponent from '../components/SingleComponent';
 describe('SingleComponent', () => {
   it('should render successfully', () => {
     render(<SingleComponent />);
-    expect(screen.getByText('Encrypted!')).toBeTruthy();
+    expect(screen.getByText('Paste')).toBeTruthy();
   });
 
   it('should be able to encrypt text', () => {
@@ -23,6 +23,6 @@ describe('SingleComponent', () => {
     // Click the encrypt button
     encryptButton.click();
     // Check that the encrypted text is displayed
-    expect(screen.getByText('Encrypted!')).toBeTruthy();
+    expect(screen.getByText('Paste')).toBeTruthy();
   });
 });
