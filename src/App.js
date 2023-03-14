@@ -1,17 +1,14 @@
 import React from "react";
 import "./App.css";
-import Decryption from "./components/Decryption";
-import Encryption from "./components/Encryption";
-
 import Header from "./components/Header";
+import SingleComponent from "./components/SingleComponent";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div className="encryptDecryptContainer1">
-        <Encryption />
-        <Decryption />
+      <div className="inputContainers">
+        <SingleComponent />
       </div>
     </div>
   );
