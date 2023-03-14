@@ -1,0 +1,10 @@
+.logo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 200px;
+  color: purple;
+}
+
+.logoContainer {
+  text-align: center;
+}
