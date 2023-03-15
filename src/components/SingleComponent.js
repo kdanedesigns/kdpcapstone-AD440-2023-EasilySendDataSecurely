@@ -71,7 +71,7 @@ function EncryptionExample() {
                     console.log(error.config);
                 });
             setEncryptedButtonState(true);
-            // await navigator.clipboard.writeText(`${encryptedText}`);
+            setDecryptedButtonState(false);
         } catch (error) {
             // console.log(encrypted);
             console.error(error);
@@ -116,6 +116,7 @@ function EncryptionExample() {
                     console.log(error.config);
                 });
             setDecryptedButtonState(true);
+            setEncryptedButtonState(false);
         } catch (error) {
             console.error(error);
         }
@@ -139,7 +140,7 @@ function EncryptionExample() {
                         </button>
                     </div>
                     <textarea
-                        aria-label="text"
+                        aria-label="encrypt_text"
                         value={textAreaValue}
                         className="encryptTextArea"
                         type="text"
