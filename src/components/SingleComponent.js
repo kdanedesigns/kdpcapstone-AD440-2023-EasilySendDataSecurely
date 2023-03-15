@@ -94,6 +94,7 @@ function EncryptionExample() {
                 .then(function (response) {
                     if (response.data.decryptedMessage === "") {
                         setOutputText("Invalid Key or No key provided.");
+                        setDecryptedButtonState(false); //prevents button change
                     } else {
                         setOutputText(response.data.decryptedMessage);
                     }
