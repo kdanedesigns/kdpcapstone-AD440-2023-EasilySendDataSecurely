@@ -1,8 +1,9 @@
 body {
-  background-image: url('./images/colors.png');
+  /* background-image: url('./images/colors.png'); */
+  background-image: url('./images/ITAR.jpg');
   background-color: black;
-  background-repeat: no-repeat;
-  background-size: auto;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

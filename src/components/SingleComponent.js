@@ -1,13 +1,11 @@
-import React, { useState, useRef } from 'react';
+
+import { React, useState, useRef } from 'react';
 import axios from 'axios';
 import { BsFillKeyFill } from 'react-icons/bs';
-import { BsFillChatLeftTextFill } from 'react-icons/bs';
 import { BsFillUnlockFill } from 'react-icons/bs';
 import { BsFillShieldLockFill } from 'react-icons/bs';
 import { FaClipboard } from 'react-icons/fa';
-import { SiLetsencrypt } from "react-icons/si";
 import { BsArrowRepeat } from "react-icons/bs";
-
 
 function EncryptionExample() {
     //button states
@@ -33,9 +31,9 @@ function EncryptionExample() {
     const resetAll = () => {
         setEncryptedButtonState(false);
         setDecryptedButtonState(false);
-        setOutputText('');
         setTextAreaValue('');
         setPasswordAreaValue('');
+        setOutputText('');
     }
 
     const handleEncryption = async () => {
@@ -73,7 +71,6 @@ function EncryptionExample() {
             setEncryptedButtonState(true);
             setDecryptedButtonState(false);
         } catch (error) {
-            // console.log(encrypted);
             console.error(error);
         }
     };
@@ -94,13 +91,13 @@ function EncryptionExample() {
                     "https://fogbnvtkba.execute-api.us-west-2.amazonaws.com/Decrypt-AD440Winter2023-V3",
                     { encryptedMessage: textAreaValue, key: passwordAreaValue }
                 )
-
                 .then(function (response) {
                     if (response.data.decryptedMessage === "") {
                         setOutputText("Invalid Key or No key provided.");
+                        setDecryptedButtonState(false); //prevents button change
+                    } else {
+                        setOutputText(response.data.decryptedMessage);
                     }
-                    console.log(response.data);
-                    setOutputText(response.data.decryptedMessage);
                 })
                 .catch(function (error) {
                     if (error.response) {
@@ -126,11 +123,7 @@ function EncryptionExample() {
         <>
             <div className="encryptContainer">
                 <div className="encryptTextAreaContainer">
-                    <div className='textAreaIconContainer'>
-                        <p className="textIcon">
-                            <BsFillChatLeftTextFill size={40} />
-                        </p>
-
+                    <div className='pasteButtonContainer'>
                         <button
                             className="pasteButton"
                             onClick={() => navigator.clipboard.readText().then((clipText) => (setTextAreaValue(clipText)))} //works in Chrome but not Firefox
@@ -146,7 +139,6 @@ function EncryptionExample() {
                         type="text"
                         onChange={handleTextAreaChange}
                         placeholder="Enter Your Message Here: "
-
                     />
                 </div>
                 <div className="encryptKeyContainer">
@@ -164,7 +156,6 @@ function EncryptionExample() {
                     />
                 </div>
                 <div className="buttonContainer">
-                    <SiLetsencrypt size={20} className="cryptIcon" />
                     <div className="encryptButtonContainer">
                         <button className="encryptButton" onClick={handleEncryption}>
                             {encryptedButtonState ? (
@@ -197,7 +188,6 @@ function EncryptionExample() {
                         </button>
                     </div>
                 </div>
-
                 <div className="encryptOutput">
                     <div className="copyButtonContainer">
                         <button

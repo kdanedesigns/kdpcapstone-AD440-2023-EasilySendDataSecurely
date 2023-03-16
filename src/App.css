@@ -1,34 +1,3 @@
-/* @font-face {
-  font-family: matrixFont;
-  src: url(./matrixFont.ttf);
-} */
-
-input {
-  color: white;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: rgb(32, 30, 30) 2px 2px 1px 1px;
-}
-
-.textIcon {
-  padding-right: 10px;
-  color: rgba(79, 199, 250, 0.979);
-  display: flex;
-  flex-direction: column;
-}
-
-.keyIcon {
-  padding-right: 5px;
-  color: rgba(79, 199, 250, 0.979);
-}
-
-.cryptIcon {
-  /* padding-right: 10px; */
-  color: rgba(79, 199, 250, 0.979);
-  padding-right: 10px;
-}
-
 .inputContainers {
   color: white;
   display: flex;
@@ -37,20 +6,99 @@ input {
   justify-content: space-evenly;
 }
 
-.encryptContainer,
-.decryptContainer {
+.encryptContainer {
   color: white;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
-  /* background-color: aqua; */
+  border: 1px solid rgba(58, 191, 248, 0.986);
+  border-color: rgba(58, 191, 248, 0.986);
+  border-radius: 10px;
+  background-color: rgba(58, 191, 248, 0.384);
+  padding: 25px;
+  box-shadow: black 6px 6px 1px 1px;
+  /* /* background-color: aqua; */
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 490px;
 }
 
-.encryptKeyContainer,
-.decryptKeyContainer {
+.encryptTextAreaContainer {
+  /* color: white; */
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* background-color: red; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 489px;
+  height: 200px;
+  margin-right: 15px;
+}
+
+.pasteButtonContainer {
+  display: flex;
+  flex-direction: column;
+  float: flex-start;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.pasteButton {
+  border-radius: 10px;
+  /* background-image: url('./images/colors.png'); */
+  background-image: url('./images/ITAR.jpg');
+  border-color: rgba(58, 191, 248, 0.986);
+  width: 40px;
+  box-shadow: rgba(0, 0, 0, 0.712) 4px 4px 1px 1px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: x-small;
+  float: left;
+  margin-top: 2px;
+  /* margin-right: 8px; */
+  display: flex;
+  flex-direction: column;
+  color: rgba(79, 199, 250, 0.979);
+  border-color: rgba(58, 191, 248, 0.986);
+}
+
+.pasteButton:hover {
+  background-image: url('./images/colors.png');
+  border-color: rgba(58, 191, 248, 0.986);
+  box-shadow: rgba(141, 192, 235, 0.856) 2px 2px 1px 1px;
+}
+
+.pasteButton:hover {
+  background-image: url('./images/colors.png');
+  border-color: rgba(58, 191, 248, 0.986);
+  box-shadow: rgba(141, 192, 235, 0.856) 2px 2px 1px 1px;
+}
+
+.encryptTextArea {
+  /* color: white; */
+  color: rgba(58, 191, 248, 0.986);
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background-color: rgba(96, 199, 243, 0.651);
+  /* background-image: url('./images/colors.png'); */
+  /* background-image: url('./images/laptop.bmp'); */
+  /* background-image: url('./images/deb38hyx.bmp');
+  background-image: url('./images/laptop.bmp'); */
+  background-image: url('./images/ITAR.jpg');
+  border-color: rgba(58, 191, 248, 0.986);
+  align-items: center;
+  justify-content: flex-start;
+  height: 170px;
+  width: 250px;
+  box-shadow: black 6px 6px 1px 1px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: x-large;
+  margin-left: 10px;
+}
+.encryptKeyContainer {
   color: white;
   display: flex;
   flex-direction: row;
@@ -58,35 +106,40 @@ input {
   /* background-color: red; */
   align-items: center;
   justify-content: flex-start;
-  width: 500px;
+  width: 490px;
 }
 
-.encryptTextArea,
-.decryptTextArea {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  background-color: rgba(96, 199, 243, 0.651);
-  background-image: url('./images/colors.png');
+.keyIcon {
+  padding-right: 02px;
+  /* color: rgba(79, 199, 250, 0.979); */
+  color: rgb(1, 10, 17);
+}
 
-  align-items: center;
-  justify-content: flex-start;
-  height: 170px;
-  width: 500px;
-  box-shadow: black 2px 2px 1px 1px;
-  border-radius: 10px;
+.encryptKeyInput {
+  color: white;
   padding: 10px;
-  font-size: x-large;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: black 6px 6px 1px 1px;
 }
 
-.encryptKeyInput,
-.decryptKeyInput {
-  color: white;
-  width: 500px;
+.encryptKeyInput {
+  /* color: white; */
+  color: rgba(58, 191, 248, 0.986);
+  margin-left: 20px;
+  width: 400px;
   background-color: rgba(96, 199, 243, 0.651);
-  background-image: url('./images/colors.png');
+  /* background-image: url('./images/colors.png'); */
+  /* background-image: url('./images/laptop.bmp'); */
+  background-image: url('./images/ITAR.jpg');
+  border-color: rgba(58, 191, 248, 0.986);
   font-size: large;
+}
+
+.encryptKeyInput:hover {
+  background-image: url('./images/laptopimage.bmp');
+  border-color: rgba(58, 191, 248, 0.986);
+  box-shadow: rgba(141, 192, 235, 0.856) 4px 4px 1px 1px;
 }
 
 .shake {
@@ -121,19 +174,6 @@ input {
   box-shadow: #f50fa8 3px 3px 1px 1px;
 }
 
-.encryptTextAreaContainer,
-.decryptTextAreaContainer {
-  /* color: white; */
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  /* background-color: red; */
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 500px;
-  height: 200px;
-}
-
 .buttonContainer {
   color: white;
   display: flex;
@@ -142,33 +182,50 @@ input {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  padding-left: 40px;
 }
 
-.pasteButtonContainer {
+.encryptButtonContainer,
+.decryptButtonContainer {
+  color: white;
   display: flex;
-  flex-direction: column;
-  float: flex-start;
-}
-.pasteButton {
-  border-radius: 10px;
-  background-image: url('./images/colors.png');
-  width: 40px;
-  box-shadow: black 2px 2px 1px 1px;
-  padding: 8px;
+  flex-direction: row;
+  /* background-color: rgb(0, 255, 106); */
+  /* border-color: rgba(58, 191, 248, 0.986); */
   align-items: center;
   justify-content: center;
-  font-size: x-small;
-  float: left;
-  margin-top: 2px;
-  margin-right: 5px;
-  display: flex;
-  flex-direction: column;
+  /* flex-grow: 1; */
+  padding-left: 10px;
+}
+
+.encryptButton,
+.decryptButton {
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: rgba(8, 61, 104, 0.856) 2px 2px 1px 1px;
+  padding: 5px;
+  margin: 5px;
+  /* color: white; */
+  color: rgba(58, 191, 248, 0.986);
+  font-size: large;
+  /* background-image: url('./images/colors.png'); */
+  background-image: url('./images/cyber-network.jpg');
+  /* background-image: url('./images/ITAR.jpg'); */
+  border-color: rgba(58, 191, 248, 0.986);
+}
+
+.encryptButton:hover,
+.decryptButton:hover {
+  background-image: url('./images/colors.png');
+  border-color: rgba(58, 191, 248, 0.986);
+  box-shadow: rgba(141, 192, 235, 0.856) 4px 4px 1px 1px;
 }
 
 .copyButtonContainer {
   color: white;
   padding-top: 10px;
-  padding-right: 5px;
+  padding-right: 15px;
+  margin-right: 0px;
   display: flex;
   flex-direction: column;
   /* background-color: rgb(0, 255, 106); */
@@ -178,44 +235,17 @@ input {
   float: left;
 }
 
-.encryptButtonContainer,
-.decryptButtonContainer {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  /* background-color: rgb(0, 255, 106); */
-  align-items: center;
-  justify-content: center;
-  /* flex-grow: 1; */
-  padding-left: 10px;
-}
-
-/* button {
-  color: white;
-  text-shadow: black 2px 2px 1px 1px;
-  align-content: center;
-  padding: 8px;
-  margin: 10px;
-  font-size: 0.8em;
-  border-radius: 10px;
-  width: 170px;
-  font-size: large;
-  background-image: url('./images/colors.png');
-  box-shadow: black 2px 2px 1px 1px;
-  /* width: 400px; */
-/* } */
-
 .copyButton,
 .resetButton {
   border-radius: 10px;
-  background-image: url('./images/colors.png');
+  /* background-image: url('./images/colors.png'); */
+  background-image: url('./images/ITAR.jpg');
   width: 40px;
   padding: 8px;
-  margin-top: 7px;
-  margin-right: 5px;
+  margin-top: 2px;
   background-color: rgba(96, 199, 243, 0.116);
   border-color: black;
-  box-shadow: black 2px 2px 1px 1px;
+  box-shadow: black 4px 4px 1px 1px;
   font-size: x-small;
 }
 
@@ -224,38 +254,43 @@ input {
 }
 
 .copyButton,
-.resetButton,
-.pasteButton {
+.resetButton {
   color: rgba(79, 199, 250, 0.979);
+  border-color: rgba(58, 191, 248, 0.986);
 }
 
-.encryptButton,
-.decryptButton {
-  width: 180px;
-  border-radius: 10px;
-  box-shadow: black 2px 2px 1px 1px;
-  padding: 5px;
-  margin: 5px;
-  color: white;
-  font-size: large;
+.copyButton:hover,
+.resetButton:hover {
   background-image: url('./images/colors.png');
+  border-color: rgba(58, 191, 248, 0.986);
+  box-shadow: rgba(141, 192, 235, 0.856) 2px 2px 1px 1px;
 }
 
-.encryptOutputTextArea,
-.decryptOutputTextArea {
+.encryptOutputTextArea {
   padding: 10px;
   margin-top: 10px;
-  color: white;
+  /* color: white; */
+  color: rgba(58, 191, 248, 0.986);
   display: flex;
   flex-direction: row;
   background-color: rgba(96, 199, 243, 0.651);
-  background-image: url('./images/colors.png');
-  /* opacity: 0.8; */
+  border-color: rgba(58, 191, 248, 0.986);
+  /* background-image: url('./images/colors.png');
+  background-image: url('./images/laptop.bmp'); */
+  background-image: url('./images/ITAR.jpg');
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  box-shadow: black 2px 2px 1px 1px;
+  box-shadow: black 6px 6px 1px 1px;
   font-size: large;
-  width: 350px;
+  width: 400px;
   height: 100px;
+  margin-right: 10px;
+}
+
+.encryptTextArea:hover,
+.encryptOutputTextArea:hover {
+  background-image: url('./images/laptopimage.bmp');
+  border-color: rgba(58, 191, 248, 0.986);
+  box-shadow: rgba(141, 192, 235, 0.856) 4px 4px 1px 1px;
 }
