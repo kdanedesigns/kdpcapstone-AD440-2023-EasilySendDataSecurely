@@ -119,6 +119,15 @@ function EncryptionExample() {
         }
     };
 
+    //copy to clipboard
+    const hiddenTextArea = useRef(null);
+
+    const handleCopyClick = () => {
+        hiddenTextArea.current.value = outputText;
+        hiddenTextArea.current.select();
+        document.execCommand('copy');
+    };
+
     return (
         <>
             <div className="encryptContainer">
@@ -192,7 +201,7 @@ function EncryptionExample() {
                     <div className="copyButtonContainer">
                         <button
                             className="copyButton"
-                            onClick={() => navigator.clipboard.writeText(`${outputText}`)}
+                            onClick={handleCopyClick}
                         >
                             <FaClipboard size={20} className="clipButton" />
                             Copy
@@ -208,6 +217,10 @@ function EncryptionExample() {
                         type="text"
                         placeholder="Output: "
                         value={outputText}
+                    />
+                    <textarea
+                        ref={hiddenTextArea}
+                        style={{ position: 'absolute', left: '-9999px' }}
                     />
                 </div>
             </div>
